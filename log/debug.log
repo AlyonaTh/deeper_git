@@ -1,0 +1,78 @@
+INFO 2023-10-08 19:07:42,887 autoreload 14952 4776 Watching for file changes with StatReloader
+INFO 2023-10-08 19:07:47,658 basehttp 14952 14860 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:07:47,949 basehttp 14952 14860 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:07:48,280 basehttp 14952 14860 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:07:48,775 basehttp 14952 14860 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:07:49,238 basehttp 14952 14860 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:07:49,675 basehttp 14952 14860 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:10:35,946 autoreload 14952 4776 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\games_app\views.py changed, reloading.
+INFO 2023-10-08 19:10:37,776 autoreload 7480 15760 Watching for file changes with StatReloader
+INFO 2023-10-08 19:12:15,281 autoreload 7480 15760 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\games_app\views.py changed, reloading.
+INFO 2023-10-08 19:12:17,426 autoreload 9508 14300 Watching for file changes with StatReloader
+INFO 2023-10-08 19:14:45,248 autoreload 9508 14300 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\games_app\views.py changed, reloading.
+INFO 2023-10-08 19:14:46,546 autoreload 3200 10208 Watching for file changes with StatReloader
+INFO 2023-10-08 19:15:51,698 autoreload 3200 10208 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\games_app\views.py changed, reloading.
+INFO 2023-10-08 19:15:53,218 autoreload 4884 16424 Watching for file changes with StatReloader
+INFO 2023-10-08 19:15:55,954 views 4884 9812 Случайное число: 6
+INFO 2023-10-08 19:15:55,959 basehttp 4884 9812 "GET /random_number/ HTTP/1.1" 200 1
+INFO 2023-10-08 19:15:56,322 views 4884 9812 Случайное число: 14
+INFO 2023-10-08 19:15:56,322 basehttp 4884 9812 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:15:56,667 views 4884 9812 Случайное число: 62
+INFO 2023-10-08 19:15:56,672 basehttp 4884 9812 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:15:57,040 views 4884 9812 Случайное число: 39
+INFO 2023-10-08 19:15:57,045 basehttp 4884 9812 "GET /random_number/ HTTP/1.1" 200 2
+INFO 2023-10-08 19:16:04,040 views 4884 9812 Значение: Tail
+INFO 2023-10-08 19:16:04,045 basehttp 4884 9812 "GET /coin/ HTTP/1.1" 200 4
+INFO 2023-10-09 20:35:58,198 autoreload 9832 16952 Watching for file changes with StatReloader
+INFO 2023-10-09 20:36:11,741 basehttp 9832 15168 "GET / HTTP/1.1" 200 12
+INFO 2023-10-09 20:36:11,811 basehttp 9832 15168 "GET / HTTP/1.1" 200 12
+INFO 2023-10-09 20:36:24,022 basehttp 9832 15168 "GET /main HTTP/1.1" 301 0
+ERROR 2023-10-09 20:36:24,515 log 9832 8024 Internal Server Error: /main/
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\myapp\views.py", line 21, in main
+    return render(request, 'myapp/main.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/main.html
+ERROR 2023-10-09 20:36:24,520 basehttp 9832 8024 "GET /main/ HTTP/1.1" 500 81259
+INFO 2023-10-09 20:37:09,102 basehttp 9832 8024 "GET /about HTTP/1.1" 301 0
+INFO 2023-10-09 20:37:09,127 views 9832 11072 Показана информация: <h1>Это страница обо мне</h1><p>Меня зовут Fk`yf. Я хочу стать программистом. Для этого постоянно получаю новые знания и пишу код. </p>
+INFO 2023-10-09 20:37:09,127 basehttp 9832 11072 "GET /about/ HTTP/1.1" 200 227
+ERROR 2023-10-09 20:37:25,317 log 9832 11072 Internal Server Error: /main/
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\myapp\views.py", line 21, in main
+    return render(request, 'myapp/main.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp/main.html
+ERROR 2023-10-09 20:37:25,322 basehttp 9832 11072 "GET /main/ HTTP/1.1" 500 81259
+INFO 2023-10-09 20:39:45,989 autoreload 9832 16952 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\myapp\views.py changed, reloading.
+INFO 2023-10-09 20:39:48,621 autoreload 17224 14812 Watching for file changes with StatReloader
+INFO 2023-10-09 20:39:48,944 views 17224 11256 Показана информация: <h1>Добро пожаловать на мой первый сайт на Django.</h1><p>Это главная страница на которой я написал эту информацию.</p>
+INFO 2023-10-09 20:39:48,949 basehttp 17224 11256 "GET /main/ HTTP/1.1" 200 199
