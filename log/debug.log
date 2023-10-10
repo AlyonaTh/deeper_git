@@ -76,3 +76,17 @@ INFO 2023-10-09 20:39:45,989 autoreload 9832 16952 C:\Users\tyoaa\OneDrive\Ра�
 INFO 2023-10-09 20:39:48,621 autoreload 17224 14812 Watching for file changes with StatReloader
 INFO 2023-10-09 20:39:48,944 views 17224 11256 Показана информация: <h1>Добро пожаловать на мой первый сайт на Django.</h1><p>Это главная страница на которой я написал эту информацию.</p>
 INFO 2023-10-09 20:39:48,949 basehttp 17224 11256 "GET /main/ HTTP/1.1" 200 199
+INFO 2023-10-09 22:27:16,252 autoreload 15128 2228 Watching for file changes with StatReloader
+INFO 2023-10-09 22:27:25,811 basehttp 15128 3592 "GET / HTTP/1.1" 200 12
+INFO 2023-10-09 22:27:34,838 views 15128 3592 Значение: Head
+INFO 2023-10-09 22:27:34,843 basehttp 15128 3592 "GET /coin/ HTTP/1.1" 200 66
+INFO 2023-10-09 22:27:42,171 views 15128 3592 Значение: Head
+INFO 2023-10-09 22:27:42,176 basehttp 15128 3592 "GET /coin/ HTTP/1.1" 200 66
+INFO 2023-10-09 22:27:45,102 views 15128 3592 Значение: Tail
+INFO 2023-10-09 22:27:45,123 basehttp 15128 3592 "GET /coin/ HTTP/1.1" 200 66
+INFO 2023-10-09 22:27:48,739 views 15128 3592 Значение: Tail
+INFO 2023-10-09 22:27:48,780 basehttp 15128 3592 "GET /coin/ HTTP/1.1" 200 66
+INFO 2023-10-10 15:58:51,739 autoreload 12832 12260 Watching for file changes with StatReloader
+INFO 2023-10-10 15:59:44,685 autoreload 12832 12260 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\models.py changed, reloading.
+INFO 2023-10-10 15:59:46,244 autoreload 11720 4560 Watching for file changes with StatReloader
+INFO 2023-10-10 16:00:03,740 autoreload 11584 2044 Watching for file changes with StatReloader

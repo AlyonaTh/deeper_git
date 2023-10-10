@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import random
 import logging
+from myapp2.models import Coin
 
 
 logger = logging.getLogger(__name__)
@@ -10,8 +11,10 @@ logger = logging.getLogger(__name__)
 def coin(request):
     game_list = ['Head','Tail']
     response = random.choice(game_list)
+    coin = Coin(is_eagle=response)
+    coin.save()
     logger.info(f'Значение: {response}')
-    return HttpResponse(response)
+    return HttpResponse(coin)
 
 
 def cube(request):
