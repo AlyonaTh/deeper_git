@@ -15,9 +15,8 @@ class Client(models.Model):
 class Goods(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/')
-    price = models.IntegerField(default=0)
-    amount = models.IntegerField(default=0)
+    price = models.IntegerField()
+    amount = models.IntegerField()
     create_at = models.DateField(auto_now_add=True)
 
     def total_price(self):

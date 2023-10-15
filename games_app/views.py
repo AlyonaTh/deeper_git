@@ -8,13 +8,16 @@ from myapp2.models import Coin
 logger = logging.getLogger(__name__)
 
 
-def coin(request):
+def coin(request, count: int):
     game_list = ['Head','Tail']
-    response = random.choice(game_list)
-    coin = Coin(is_eagle=response)
-    coin.save()
-    logger.info(f'Значение: {response}')
-    return HttpResponse(coin)
+    result = []
+    for i in range(count):
+        response = random.choice(game_list)
+        result.append(response)
+    context = {
+        'result': result
+    }
+    return render(request, 'myapp/index.html', context=context)
 
 
 def cube(request):
