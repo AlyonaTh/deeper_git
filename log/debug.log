@@ -90,3 +90,240 @@ INFO 2023-10-10 15:58:51,739 autoreload 12832 12260 Watching for file changes wi
 INFO 2023-10-10 15:59:44,685 autoreload 12832 12260 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\models.py changed, reloading.
 INFO 2023-10-10 15:59:46,244 autoreload 11720 4560 Watching for file changes with StatReloader
 INFO 2023-10-10 16:00:03,740 autoreload 11584 2044 Watching for file changes with StatReloader
+INFO 2023-10-12 14:59:17,191 autoreload 2524 13928 Watching for file changes with StatReloader
+INFO 2023-10-12 15:01:04,477 autoreload 2524 13928 C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\models.py changed, reloading.
+INFO 2023-10-12 15:01:07,079 autoreload 2760 4080 Watching for file changes with StatReloader
+INFO 2023-10-12 15:01:22,273 basehttp 2760 12512 "GET / HTTP/1.1" 200 12
+INFO 2023-10-12 15:01:22,372 basehttp 2760 12512 "GET / HTTP/1.1" 200 12
+INFO 2023-10-12 15:01:29,186 basehttp 2760 7852 "GET / HTTP/1.1" 200 12
+WARNING 2023-10-12 15:01:53,829 log 2760 16584 Not Found: /CLIENTS
+WARNING 2023-10-12 15:01:53,832 basehttp 2760 16584 "GET /CLIENTS HTTP/1.1" 404 5114
+INFO 2023-10-12 15:02:08,380 basehttp 2760 9736 "GET /clients HTTP/1.1" 301 0
+ERROR 2023-10-12 15:02:09,341 log 2760 16996 Internal Server Error: /clients/
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: internet_shop_client
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\views.py", line 7, in get_clients
+    context = '\n'.join(str(client) for client in clients)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: internet_shop_client
+ERROR 2023-10-12 15:02:09,370 basehttp 2760 16996 "GET /clients/ HTTP/1.1" 500 128132
+INFO 2023-10-12 15:02:22,698 basehttp 2760 3240 "GET /goods HTTP/1.1" 301 0
+ERROR 2023-10-12 15:02:22,791 log 2760 3236 Internal Server Error: /goods/
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: internet_shop_goods
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\views.py", line 13, in get_goods
+    context = '\n'.join(str(g) for g in goods)
+                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: internet_shop_goods
+ERROR 2023-10-12 15:02:22,800 basehttp 2760 3236 "GET /goods/ HTTP/1.1" 500 128649
+WARNING 2023-10-12 15:03:02,063 log 2760 12424 Not Found: /edit_client_name
+WARNING 2023-10-12 15:03:02,063 basehttp 2760 12424 "GET /edit_client_name HTTP/1.1" 404 5141
+ERROR 2023-10-12 15:03:43,060 log 2760 13132 Internal Server Error: /edit_client_name/1/name
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: internet_shop_client
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\views.py", line 60, in edit_client_name
+    client = Client.objects.filter(pk=client_id).first()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 1057, in first
+    for obj in queryset[:1]:
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: internet_shop_client
+ERROR 2023-10-12 15:03:43,075 basehttp 2760 13132 "GET /edit_client_name/1/name HTTP/1.1" 500 133919
+INFO 2023-10-12 15:10:48,629 autoreload 1184 14652 Watching for file changes with StatReloader
+INFO 2023-10-12 15:10:55,416 basehttp 1184 4120 "GET / HTTP/1.1" 200 12
+ERROR 2023-10-12 15:11:20,034 log 1184 11496 Internal Server Error: /clients/
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: internet_shop_client
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\internet_shop\views.py", line 7, in get_clients
+    context = '\n'.join(str(client) for client in clients)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tyoaa\OneDrive\Рабочий стол\Django\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: internet_shop_client
+ERROR 2023-10-12 15:11:20,043 basehttp 1184 11496 "GET /clients/ HTTP/1.1" 500 128132
+WARNING 2023-10-12 15:11:36,876 log 1184 14664 Not Found: /c
+WARNING 2023-10-12 15:11:36,881 basehttp 1184 14664 "GET /c HTTP/1.1" 404 5096
+INFO 2023-10-14 20:09:58,021 autoreload 6644 16556 Watching for file changes with StatReloader
+INFO 2023-10-14 20:10:09,645 basehttp 6644 15284 "GET / HTTP/1.1" 200 12
+INFO 2023-10-14 20:10:32,902 basehttp 6644 12568 "GET /coin HTTP/1.1" 301 0
+INFO 2023-10-14 20:10:34,843 views 6644 16200 Значение: Head
+INFO 2023-10-14 20:10:34,843 basehttp 6644 16200 "GET /coin/ HTTP/1.1" 200 66
+WARNING 2023-10-14 20:10:43,789 log 6644 6672 Not Found: /cgla
+WARNING 2023-10-14 20:10:43,794 basehttp 6644 6672 "GET /cgla HTTP/1.1" 404 5105
