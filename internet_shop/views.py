@@ -3,6 +3,11 @@ from datetime import date
 from django.shortcuts import render
 from django.http import HttpResponse
 from internet_shop.models import Client, Goods, Order
+import logging
+from django.core.files.storage import FileSystemStorage
+from internet_shop.forms import GoodsForm
+
+logger = logging.getLogger(__name__)
 
 
 def get_clients(request):
@@ -45,6 +50,26 @@ def get_orders_by_client_id(request, client_id: int):
     else:
         context = f'У пользователя с id: {client_id} нет заказов'
     return HttpResponse(context)
+
+
+def add_goods(request):
+    message = ''
+    if request.method == 'POST':
+        form = GoodsForm(request.POST, request.FILES)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            description = form.cleaned_data['description']
+            price = form.cleaned_data['price']
+            amount = form.cleaned_data['amount']
+            image = form.cleaned_data['image']
+            logger.info(f'Получили {name=}, {description=}, {price=}, {amount=}, {image=}')
+            goods = Goods(name=name, description=description, price=price, amount=amount, image=image)
+            goods.save()
+            message = 'Товар сохранен'
+    else:
+        form = GoodsForm()
+    return render(request, 'internet_shop/goods_form.html',
+                  {'form': form, 'message': message})
 
 
 def delete_client(request, client_id: int):
